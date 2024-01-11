@@ -86,6 +86,45 @@ function  logstatus(text){
 const navbarTitle = document.getElementById('navbarTitle');
 navbarTitle.textContent = text;
 }
+function handleHover(action) {
+    // Thực hiện hành động tương ứng với hover (ví dụ: gọi hàm Forward(), Backward(), ...)
+    switch (action) {
+        case 'Forward':
+            Forward();
+            break;
+        case 'Backward':
+            Backward();
+            break;
+        case 'Right':
+            Right();
+            break;
+        case 'Left':
+            Left();
+            break;
+        case 'Stop':
+            Stop();
+            break;
+        case 'BackLeft':
+            BackLeft();
+            break;
+        case 'BackRight':
+            BackRight();
+            break;
+        case 'ForwardLeft':
+            ForwardLeft();
+            break;
+        case 'ForwardRight':
+            ForwardRight();
+            break;
+        // ... Các case khác ...
+        default:
+            break;
+    }
+}
+function handleMouseOut() {
+    // Xử lý khi chuột rời khỏi button
+    Stop();
+}
 // Function hướng 
 function Forward(){
     send("F");
