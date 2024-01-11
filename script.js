@@ -153,6 +153,24 @@ function BackLeft(){
 function BackRight(){
     send("J");
 }
+function ledOff(){
+    send("w");
+}
+function ledOn(){
+    send("W");
+}
+function gripperClose(){
+    send("X");
+}
+function gripperOpen(){
+    send("x");
+}
+function hornOff(){
+    send("v");
+}
+function hornOn(){
+    send("V");
+}
 document.addEventListener('DOMContentLoaded', function () {
     var infoButton = document.getElementById('infoButton');
     var infoContent = document.getElementById('infoContent');

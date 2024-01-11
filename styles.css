@@ -55,6 +55,20 @@ footer {
     background-color: #343a40;
     color: #fff;
 }
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #f00c0c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .control-buttons {
     position: relative;
     width: 200px;
@@ -81,7 +95,11 @@ footer {
 .control-button:hover {
     background-color: #8a6867;
 }
-
+.button img {
+    width: 26px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
+    height: 26px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
+    margin-bottom: 5px;
+}
 .button-Left::before {
     content: "";
     display: inline-block;
