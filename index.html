@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar" style="padding: 0px 0px;">
+        <button class="btn btn-primary-scan" id="toggleButton" onclick="toggleFunction()">
+            <img src="ble_logo.png" alt="Scan Icon"><span id="buttonText">Scan</span>  
+        </button>
+        <a href="#" id="navbarTitle" style="color: rgb(218, 79, 79)">Scan to connect</a>
+        <div class="info-container">
+            <button id="infoButton"><i class="fas fa-info-circle"></i></button>
+            <div class="info-content" id="infoContent">
+                <h6><strong>Web BLE Terminal</strong></h6>
+                <h6><strong>Device: JDY-33</strong></h6>
+                <h6>Service UUID: 0000ffe0-0000-1000-8000-00805f9b34fb</h6>
+                <h6>Characteristic UUID: 0000ffe1-0000-1000-8000-00805f9b34fb</h6>
+                <footer class="text-center py-2" style="color: rgb(218, 79, 79)">
+                    &copy; PTIT TEAM
+                </footer>
+            </div>
+        </div>
+    </nav>
+    <hr style="margin:0">
+  <div class="control-buttons">
+    <button class="control-button button-Forward" onclick="Forward()"></button>
+    <button class="control-button button-Backward"  onclick="Backward()"></button>
+    <button class="control-button button-Right" onclick="Right()"></button>
+    <button class="control-button button-Left" onclick="Left()"></button>
+    <button class="control-button button-Stop" onclick="Stop()"></button>
+    <button class="control-button button-ForwardRight" onclick="ForwardRight()"></button>
+    <button class="control-button button-ForwardLeft" onclick="ForwardLeft()"></button>
+    <button class="control-button button-BackLeft" onclick="BackLeft()"></button>
+    <button class="control-button button-BackRight" onclick="BackRight()"></button>
+  </div>
+</body>
+<script type = "text/javascript" src="script.js"></script>
+</html>
