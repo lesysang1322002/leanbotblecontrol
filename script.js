@@ -188,3 +188,13 @@ document.addEventListener('DOMContentLoaded', function () {
         infoContent.style.display = 'none';
     });
 });
+    var speedSlider = document.getElementById('speed-slider');
+    var speedValue = document.getElementById('speed-value');
+
+    // Thiết lập sự kiện khi thanh kéo thay đổi
+    speedSlider.addEventListener('input', function() {
+        var speed = speedSlider.value;
+        speedValue.innerText = speed;
+        // Thực hiện các công việc khác tương ứng với giá trị speed
+        send(speed);
+});

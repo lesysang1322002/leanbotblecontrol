@@ -100,6 +100,26 @@ footer {
     height: 26px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
     margin-bottom: 5px;
 }
+#image {
+    max-width: 30;
+    max-height: 30px; /* Điều chỉnh chiều cao tối đa theo nhu cầu */
+    margin-bottom: 12px;
+    padding-right: 10px;
+}
+.container {
+    text-align: center;
+}
+
+#speed-slider {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#display-speed {
+    display: inline-block;
+    vertical-align: middle;
+}
 .button-Left::before {
     content: "";
     display: inline-block;
