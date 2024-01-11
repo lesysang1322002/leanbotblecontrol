@@ -5,7 +5,7 @@
 }
 #navbarTitle {
     margin: 0 auto; /* Căn giữa văn bản "Scan to connect" */
-    font-size: 16px; 
+    font-size: 16px;
 }
 .btn-primary-scan {
     display: flex;
