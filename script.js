@@ -198,3 +198,22 @@ document.addEventListener('DOMContentLoaded', function () {
         // Thực hiện các công việc khác tương ứng với giá trị speed
         send(speed);
 });
+function listen() {
+    annyang.start({ continuous: true });
+}
+function stopListen() {
+    annyang.abort();
+}
+annyang.addCommands({
+    'turn on' : ledOn,
+    'turn off' : ledOff,
+    'open' : gripperOpen,
+    'close': gripperClose,
+    'turn left':Left,
+    'turn right':Right,
+    'forward': Forward,
+    'backward': Backward,
+    'unmute' : hornOn,
+    'mute' : hornOff,
+    'stop listen': stopListen,
+});

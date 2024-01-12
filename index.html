@@ -10,10 +10,10 @@
 </head>
 <body>
     <nav class="navbar" style="padding: 0px 0px;">
-        <button class="btn btn-primary-scan" id="toggleButton" onclick="toggleFunction()">
+        <button class="btn btn-primary-scan" id="toggleButton" onclick="toggleFunction()" style="padding: 0px 0px">
             <img src="ble_logo.png" alt="Scan Icon"><span id="buttonText">Scan</span>  
         </button>
-        <a class="navbar-brand" href="#" id="navbarTitle" style="color: rgb(218, 79, 79)">Scan to connect</a>
+        <a class="navbar-brand center-text" href="#" id="navbarTitle" style="color: rgb(218, 79, 79)">Scan to connect</a>
         <div class="info-container">
             <button id="infoButton"><i class="fas fa-info-circle"></i></button>
             <div class="info-content" id="infoContent">
@@ -29,15 +29,30 @@
     </nav>
     <hr style="margin:0">
     <br>
-    <div class="button-container">
-        <button class="button"  onclick="ledOff()"><img src="ledOff.png" alt="Image 1"></button>
-        <button class="button"  onclick="ledOn()"><img src="ledOn.png" alt="Image 2"> </button>
-        <button class="button"  onclick="gripperClose()"><img src="gripclose.png" alt="Image 3"> </button>
-        <button class="button"  onclick="gripperOpen()"><img src="gripopen.png" alt="Image 4"> </button>
-        <button class="button"  onclick="hornOff()"><img src="audioOff.png" alt="Image 5"> </button>
-        <button class="button"  onclick="hornOn()"><img src="audioOn.png" alt="Image 6"> </button>
-    </div>
+    <div class="button-container control-buttons main">
+        <div class="column">
+            <button class="button" onclick="ledOff"><img src="ledOff.png" alt="Led off"></button>
+            <br>
+            <button class="button" onclick="gripperOpen"><img src="gripopen.png" alt="Gripper Open"></button>
+            <br>
+            <button class="button" onclick="hornOff"><img src="audioOff.png" alt="Horn Off"></button>
+            <br>
+            <button class="button"  onclick="stopListen()"><img src="micoff.png" alt="Mic Off"></button>
+        </div>
+        <div class="column">
+            <button class="button" onclick="ledOn"><img src="ledOn.png" alt="Led On"></button>
+            <br>
+            <button class="button" onclick="gripperClose"><img src="gripclose.png" alt="Gripper Close"></button>
+            <br>
+            <button class="button" onclick="hornOn"><img src="audioOn.png" alt="Horn On"></button>
+            <br>
+            <button class="button"  onclick="listen()"><img src="micron.png" alt="Mic On"></button>
+        </div>
+    </div>    
     <br>
+    <br>
+    <br>
+    <div class="second">
   <div class="control-buttons">
     <button class="control-button button-Forward" onmouseover="handleHover('Forward')" onmouseout="handleMouseOut()"></button>
     <button class="control-button button-Backward" onmouseover="handleHover('Backward')" onmouseout="handleMouseOut()"></button>
@@ -55,6 +70,8 @@
     <input type="range" id="speed-slider" min="0" max="9" value="5" step="1">
     <div id="display-speed"><strong>Speed: </strong><span id="speed-value">5</span></div>
 </div>
+</div>
 </body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
 <script type = "text/javascript" src="script.js"></script>
 </html>
