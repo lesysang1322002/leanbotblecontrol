@@ -32,7 +32,7 @@
     border: none;
     font-size: 17px;
     cursor: pointer;
-    padding-left:85px;
+    /* padding-left:85px; */
     /* width: 70px; */
 }
 .info-content {
