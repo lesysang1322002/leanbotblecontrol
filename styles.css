@@ -63,11 +63,6 @@ footer {
     color: #333; /* Màu sắc văn bản tùy chọn */
     font-size: 24px; /* Kích thước font tùy chọn */
 }
-.button-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-}
 
 .button {
     padding: 10px;
@@ -78,13 +73,41 @@ footer {
     cursor: pointer;
     margin :5px;
 }
-.control-buttons {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
+  @media screen and (orientation: landscape) {
+    .control-buttons {
+        margin-top: 20px;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        /* margin: 0 auto; */
+    }
+    .button-container {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 100px;
+        width:50vh;
+    }
+    .container {
+        display: flex;
+        width: 100%;
+    }
+}
 
+/* Media query cho chế độ dọc */
+@media screen and (orientation: portrait) {
+    .control-buttons {
+        /* margin-top: 30px; */
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+    } 
+}
 .control-button {
     position: absolute;
     width: 40px;
