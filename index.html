@@ -29,8 +29,23 @@
     </nav>
     <hr style="margin:0">
     <br>
-    <div class="container" >
-  <div class="control-buttons">
+    <!-- <div class="container" > -->
+        <!-- <div class="button-container"> -->
+    <div class="row">
+    <div class="column on-off">
+    <div class="row">
+        <button class="button column" onclick="ledOff()"><img src="ledOff.png" alt="Led off"></button>
+        <button class="button column" onclick="gripperOpen()"><img src="gripopen.png" alt="Gripper Open"></button>
+        <button class="button column" onclick="hornOff()"><img src="audioOff.png" alt="Horn Off"></button>
+    </div>
+    <div class="row">
+        <button class="button column" onclick="ledOn()"><img src="ledOn.png" alt="Led On"></button>
+        <button class="button column" onclick="gripperClose()"><img src="gripclose.png" alt="Gripper Close"></button>
+        <button class="button column" onclick="hornOn()"><img src="audioOn.png" alt="Horn On"></button>
+    </div>
+    </div>  
+        <!-- </div> -->
+    <div class="control-buttons cloumn">
     <button class="control-button button-Forward" onmouseover="handleHover('Forward')" onmouseout="handleMouseOut()"></button>
     <button class="control-button button-Backward" onmouseover="handleHover('Backward')" onmouseout="handleMouseOut()"></button>
     <button class="control-button button-Right" onmouseover="handleHover('Right')" onmouseout="handleMouseOut()"></button>
@@ -40,33 +55,18 @@
     <button class="control-button button-ForwardLeft" onmouseover="handleHover('ForwardLeft')" onmouseout="handleMouseOut()"></button>
     <button class="control-button button-BackLeft" onmouseover="handleHover('BackLeft')" onmouseout="handleMouseOut()"></button>
     <button class="control-button button-BackRight" onmouseover="handleHover('BackRight')" onmouseout="handleMouseOut()"></button>
+    </div> 
   </div>
-  <div class="button-container">
-    <div class="column">
-        <button class="button" onclick="ledOff()"><img src="ledOff.png" alt="Led off"></button>
-        <br>
-        <button class="button" onclick="gripperOpen()"><img src="gripopen.png" alt="Gripper Open"></button>
-        <br>
-        <button class="button" onclick="hornOff()"><img src="audioOff.png" alt="Horn Off"></button>
-        <br>
-        <button class="button"  onclick="stopListen()"><img src="micoff.png" alt="Mic Off"></button>
-    </div>
-    <div class="column">
-        <button class="button" onclick="ledOn()"><img src="ledOn.png" alt="Led On"></button>
-        <br>
-        <button class="button" onclick="gripperClose()"><img src="gripclose.png" alt="Gripper Close"></button>
-        <br>
-        <button class="button" onclick="hornOn()"><img src="audioOn.png" alt="Horn On"></button>
-        <br>
-        <button class="button"  onclick="listen()"><img src="micron.png" alt="Mic On"></button>
-    </div>
-</div>  
-  </div>
-  <br>
-  <div class="container">
+    <div class="row">
+    <div class="speed">
     <img src="speed.png" alt="Speed" id="image">
     <input type="range" id="speed-slider" min="0" max="9" value="5" step="1">
     <div id="display-speed"><strong>Speed: </strong><span id="speed-value">5</span></div>
+    </div>
+    <div class= "row mic">
+    <button class="button column"  onclick="stopListen()"><img src="micoff.png" alt="Mic Off"></button>
+    <button class="button column"  onclick="listen()"><img src="micron.png" alt="Mic On"></button>
+    </div>
 </div>
 
 </body>

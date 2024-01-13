@@ -32,8 +32,6 @@
     border: none;
     font-size: 17px;
     cursor: pointer;
-    /* padding-left:85px; */
-    /* width: 70px; */
 }
 .info-content {
     display: none;
@@ -75,38 +73,45 @@ footer {
 }
   @media screen and (orientation: landscape) {
     .control-buttons {
-        margin-top: 20px;
         position: relative;
         width: 200px;
         height: 200px;
-        /* margin: 0 auto; */
+        margin-right: 50px;
     }
-    .button-container {
-        display: flex;
-        justify-content: space-around;
-        margin-left: 100px;
-        width:50vh;
+    .on-off{
+        width: 50%;
     }
     .container {
         display: flex;
         width: 100%;
+    }
+    .speed{
+        width:50%; 
+    }
+    .mic{
+        width:50%;
     }
 }
 
 /* Media query cho chế độ dọc */
 @media screen and (orientation: portrait) {
     .control-buttons {
-        /* margin-top: 30px; */
         position: relative;
         width: 200px;
         height: 200px;
         margin: 0 auto;
-      }
-      .button-container {
+    }
+    .on-off{
+        width: 100%;
+    }
+    .speed{
+        width:100%;
         display: flex;
-        justify-content: space-around;
-        margin: 20px;
-    } 
+        justify-content: center;
+    }
+    .mic{
+        width:100%;
+    }  
 }
 .control-button {
     position: absolute;
@@ -149,6 +154,7 @@ footer {
 }
 
 #display-speed {
+    padding-top: 3px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -271,3 +277,12 @@ right: 160px;
 bottom: 0px;
 left: 160px;
 }
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin:10px;
+}
+.column {
+    margin: 5px;
+}
+  
