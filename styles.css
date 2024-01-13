@@ -115,8 +115,8 @@ footer {
 }
 .control-button {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border: none;
     border-radius: 50%;
     background-color: #f00c0c;
@@ -133,15 +133,16 @@ footer {
     background-color: #8a6867;
 }
 .button img {
-    width: 26px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
-    height: 26px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
+    width: 30px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
+    height: 30px; /* Điều chỉnh kích thước ảnh theo nhu cầu */
     margin-bottom: 5px;
 }
 #image {
     max-width: 30;
     max-height: 30px; /* Điều chỉnh chiều cao tối đa theo nhu cầu */
     margin-bottom: 12px;
-    padding-right: 10px;
+    margin-left:20px;
+    /* padding-right: 20px; */
 }
 .container {
     text-align: center;
