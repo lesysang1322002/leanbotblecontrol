@@ -27,34 +27,29 @@
             </div>
         </div>
     </nav>
-    <hr style="margin:0">
-    <br>
-    <!-- <div class="container" > -->
-        <!-- <div class="button-container"> -->
     <div class="row">
-    <div class="column on-off">
-    <div class="row">
+    <div class="column on-off ">
+    <div class="row" style="margin:0px">
         <button class="button column" onclick="ledOff()"><img src="ledOff.png" alt="Led off"></button>
         <button class="button column" onclick="gripperOpen()"><img src="gripopen.png" alt="Gripper Open"></button>
         <button class="button column" onclick="hornOff()"><img src="audioOff.png" alt="Horn Off"></button>
     </div>
-    <div class="row">
+    <div class="row" style="margin:0px;">
         <button class="button column" onclick="ledOn()"><img src="ledOn.png" alt="Led On"></button>
         <button class="button column" onclick="gripperClose()"><img src="gripclose.png" alt="Gripper Close"></button>
         <button class="button column" onclick="hornOn()"><img src="audioOn.png" alt="Horn On"></button>
     </div>
-    </div>  
-        <!-- </div> -->
+    </div>
     <div class="control-buttons cloumn">
-    <button class="control-button button-Forward"   onclick="Forward()"></button>
-    <button class="control-button button-Backward"  onclick="Backward()"></button>
-    <button class="control-button button-Right"     onclick="Right()"></button>
-    <button class="control-button button-Left"      onclick="Left()"></button>
-    <button class="control-button button-Stop"      onclick="Stop()"></button>
-    <button class="control-button button-ForwardRight" onclick="ForwardRight()"></button>
-    <button class="control-button button-ForwardLeft"  onclick="ForwardLeft()"></button>
-    <button class="control-button button-BackLeft"     onclick="BackLeft()"></button>
-    <button class="control-button button-BackRight"    onclick="BackRight()"></button>
+        <button class="control-button button-Forward"   onclick="Forward()"></button>
+        <button class="control-button button-Backward"  onclick="Backward()"></button>
+        <button class="control-button button-Right"     onclick="Right()"></button>
+        <button class="control-button button-Left"      onclick="Left()"></button>
+        <button class="control-button button-Stop"      onclick="Stop()"></button>
+        <button class="control-button button-ForwardRight" onclick="ForwardRight()"></button>
+        <button class="control-button button-ForwardLeft"  onclick="ForwardLeft()"></button>
+        <button class="control-button button-BackLeft"     onclick="BackLeft()"></button>
+        <button class="control-button button-BackRight"    onclick="BackRight()"></button>
     </div> 
   </div>
     <div class="row">
@@ -63,11 +58,11 @@
     <input type="range" id="speed-slider" min="0" max="9" value="5" step="1">
     <div id="display-speed"><strong>Speed: </strong><span id="speed-value">5</span></div>
     </div>
-    <div class= "row mic">
-    <button class="button column"  onclick="stopListen()"><img src="micoff.png" alt="Mic Off"></button>
-    <button class="button column"  onclick="listen()"><img src="micron.png" alt="Mic On"></button>
+    <div class= "mic no-influence">
+    <button class="button"  onclick="stopListen()"><img src="micoff.png" alt="Mic Off"></button>
+    <button class="button"  onclick="listen()"><img src="micron.png" alt="Mic On"></button>
     </div>
-</div>
+    </div>
 
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
