@@ -91,16 +91,19 @@ footer {
     .speed{
         width:50%;
         margin-left:auto; 
-        margin-top:13px;
+        margin-top:20px;
     }
     .mic{
         width:50%;
-        margin-right: 50px;
+        margin-right: 75px;
     }
     .no-influence {
         position: fixed;
         width:50%;
         margin-bottom: 90px;
+    }
+    .speed-value{
+        margin-bottom:9px
     }
 }
 
@@ -132,6 +135,9 @@ footer {
         position: fixed;
         bottom: 0;
         margin-bottom: 50px;
+    }
+    .speed-value{
+        margin-top:3px;
     }
 }
 .control-button {
