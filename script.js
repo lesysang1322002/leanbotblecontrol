@@ -200,9 +200,21 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function listen() {
     annyang.start({ continuous: true });
+    document.getElementById('ledOnText').innerText = "Turn on";
+    document.getElementById('ledOffText').innerText = "Turn off";
+    document.getElementById('MuteText').innerText = "Mute";
+    document.getElementById('UnmuteText').innerText = "Unmute";
+    document.getElementById('OpenText').innerText = "Open";
+    document.getElementById('CloseText').innerText = "Close";
 }
 function stopListen() {
     annyang.abort();
+    document.getElementById('ledOnText').innerText = "";
+    document.getElementById('ledOffText').innerText = "";
+    document.getElementById('MuteText').innerText = "";
+    document.getElementById('UnmuteText').innerText = "";
+    document.getElementById('OpenText').innerText = "";
+    document.getElementById('CloseText').innerText = "";
 }
 annyang.addCommands({
     'turn on' : ledOn,
@@ -217,3 +229,6 @@ annyang.addCommands({
     'mute' : hornOff,
     'stop listen': stopListen,
 });
+// annyang.addCallback('result', function(phrases) {
+//     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
+// });
