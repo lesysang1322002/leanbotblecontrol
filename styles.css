@@ -91,10 +91,16 @@ footer {
     .speed{
         width:50%;
         margin-left:auto; 
+        margin-top:13px;
     }
     .mic{
         width:50%;
-        margin-right: 70px;
+        margin-right: 50px;
+    }
+    .no-influence {
+        position: fixed;
+        width:50%;
+        margin-bottom: 90px;
     }
 }
 
@@ -121,7 +127,12 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-    }  
+    }
+    .no-influence {
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 50px;
+    }
 }
 .control-button {
     position: absolute;
@@ -296,9 +307,5 @@ left: 160px;
 .column {
     margin: 5px;
 }
-.no-influence {
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 50px;
-}
+
   
