@@ -79,8 +79,9 @@
     <div class="speed-value" id="display-speed"><strong>Speed: </strong><span id="speed-value">5</span></div>
     </div>
     <div class= "mic no-influence">
-    <button class="button"  onclick="stopListen()"><img src="micoff.png" alt="Mic Off"></button>
-    <button class="button"  onclick="listen()"><img src="micron.png" alt="Mic On"></button>
+    <button class="button" onclick="toggleListen()">
+        <img id="micImage" src="micoff.png" alt="Mic Off">
+    </button>
     <!-- <div id="spokenCommand"></div> -->
     </div>
     </div>

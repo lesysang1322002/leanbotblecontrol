@@ -217,18 +217,35 @@ function stopListen() {
     document.getElementById('CloseText').innerText = "";
 }
 annyang.addCommands({
-    'turn on' : ledOn,
-    'turn off' : ledOff,
+    'light on' : ledOn,
+    'light off' : ledOff,
     'open' : gripperOpen,
     'close': gripperClose,
     'turn left':Left,
     'turn right':Right,
     'forward': Forward,
     'backward': Backward,
-    'unmute' : hornOn,
-    'mute' : hornOff,
+    'sound on' : hornOn,
+    'sound off' : hornOff,
     'stop listen': stopListen,
 });
 // annyang.addCallback('result', function(phrases) {
 //     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
 // });
+let isListening = false;
+
+function toggleListen() {
+  if (isListening) {
+    stopListen();
+  } else {
+    listen();
+  }
+
+  isListening = !isListening;
+  updateMicImage();
+}
+function updateMicImage() {
+    const micImage = document.getElementById("micImage");
+    micImage.src = isListening ? "micron.png" : "micoff.png";
+    micImage.alt = isListening ? "Mic On" : "Mic Off";
+  }
