@@ -229,9 +229,9 @@ annyang.addCommands({
     'turn off the sound' : hornOff,
     'stop': Stop,
 });
-// annyang.addCallback('result', function(phrases) {
-//     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
-// });
+annyang.addCallback('result', function(phrases) {
+    document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
+});
 let isListening = false;
 
 function toggleListen() {
