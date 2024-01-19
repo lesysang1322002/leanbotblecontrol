@@ -316,5 +316,11 @@ left: 160px;
     margin: 5px;
     /* display: flex; */
 }
+.button-container{
+    text-align: center;
+}
+.button-container span {
+        display: inline-block;
+}
 
   

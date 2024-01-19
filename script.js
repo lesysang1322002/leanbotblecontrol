@@ -217,17 +217,17 @@ function stopListen() {
     document.getElementById('CloseText').innerText = "";
 }
 annyang.addCommands({
-    'light on' : ledOn,
-    'light off' : ledOff,
+    'turn on the light' : ledOn,
+    'turn off the light' : ledOff,
     'open' : gripperOpen,
     'close': gripperClose,
     'turn left':Left,
     'turn right':Right,
     'forward': Forward,
     'backward': Backward,
-    'sound on' : hornOn,
-    'sound off' : hornOff,
-    'stop listen': stopListen,
+    'turn on the sound' : hornOn,
+    'turn off the sound' : hornOff,
+    'stop': Stop,
 });
 // annyang.addCallback('result', function(phrases) {
 //     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];

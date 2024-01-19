@@ -30,37 +30,58 @@
     <div class="row">
     <div class="column on-off ">
     <div class="row" style="margin:0px">
-        <div class="button-container column">
+        <div class="button-container">
             <button class="button" onclick="ledOff()">
                 <img src="ledOff.png" alt="Led off">
             </button>
+            <br>
             <span id="ledOffText"></span>
         </div>
-        <div class="button-container column">        
+        <div class="button-container">        
         <button class="button" onclick="gripperOpen()"><img src="gripopen.png" alt="Gripper Open"></button>
+        <br>
         <span id="OpenText" ></span>
         </div>
-        <div class="button-container column">        
+        <div class="button-container">        
         <button class="button" onclick="hornOff()"><img src="audioOff.png" alt="Horn Off"></button>
+        <br>
         <span id="MuteText"></span>
         </div>
     </div>
     <div class="row" style="margin:0px;">
-        <div class="button-container column">       
+        <div class="button-container">       
         <button class="button" onclick="ledOn()"><img src="ledOn.png" alt="Led On"></button>
+        <br>
         <span id="ledOnText" ></span>
         </div>
-        <div class="button-container column">        
+        <div class="button-container">        
         <button class="button" onclick="gripperClose()"><img src="gripclose.png" alt="Gripper Close"></button>
+        <br>
         <span id="CloseText" ></span>
         </div>
-        <div class="button-container column">        
+        <div class="button-container">        
         <button class="button" onclick="hornOn()"><img src="audioOn.png" alt="Horn On"></button>
+        <br>
         <span id="UnmuteText"></span>
         </div>
     </div>
     </div>
     <div class="control-buttons cloumn">
+        <!-- <div class="grid-container">
+            <div>
+            <div class="grid-item control-button button-Forward"></div>
+            <br>
+            <span>left</span>
+            </div>
+            <div class="grid-item control-button button-Backward"></div>
+            <div class="grid-item control-button button-Right"></div>
+            <div class="grid-item control-button button-Left"></div>
+            <div class="grid-item control-button button-Stop"></div>
+            <div class="grid-item control-button button-ForwardRight"></div>
+            <div class="grid-item control-button button-ForwardLeft"></div>
+            <div class="grid-item control-button button-BackLeft"></div>
+            <div class="grid-item control-button button-BackRight"></div>
+        </div> -->
         <button class="control-button button-Forward"   onclick="Forward()"></button>
         <button class="control-button button-Backward"  onclick="Backward()"></button>
         <button class="control-button button-Right"     onclick="Right()"></button>
