@@ -200,10 +200,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 function listen() {
     annyang.start({ continuous: true });
-    document.getElementById('ledOnText').innerText = "Turn on";
-    document.getElementById('ledOffText').innerText = "Turn off";
-    document.getElementById('MuteText').innerText = "Mute";
-    document.getElementById('UnmuteText').innerText = "Unmute";
+    document.getElementById('ledOnText').innerText = "Light on";
+    document.getElementById('ledOffText').innerText = "Light off";
+    document.getElementById('MuteText').innerText = "Sound off";
+    document.getElementById('UnmuteText').innerText = "Sound on";
     document.getElementById('OpenText').innerText = "Open";
     document.getElementById('CloseText').innerText = "Close";
 }
