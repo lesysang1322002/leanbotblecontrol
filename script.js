@@ -218,16 +218,16 @@ function stopListen() {
     document.getElementById('spokenCommand').innerHTML = "";
 }
 annyang.addCommands({
-    'turn on the light' : ledOn,
-    'turn off the light' : ledOff,
+    'light on' : ledOn,
+    'light off' : ledOff,
     'open' : gripperOpen,
     'close': gripperClose,
     'turn left':Left,
     'turn right':Right,
     'forward': Forward,
     'backward': Backward,
-    'turn on the sound' : hornOn,
-    'turn off the sound' : hornOff,
+    'sound on' : hornOn,
+    'sound off' : hornOff,
     'stop': Stop,
 });
 annyang.addCallback('result', function(phrases) {
