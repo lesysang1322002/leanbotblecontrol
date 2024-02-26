@@ -215,6 +215,7 @@ function stopListen() {
     document.getElementById('UnmuteText').innerText = "";
     document.getElementById('OpenText').innerText = "";
     document.getElementById('CloseText').innerText = "";
+    document.getElementById('spokenCommand').innerHTML = "";
 }
 annyang.addCommands({
     'turn on the light' : ledOn,
