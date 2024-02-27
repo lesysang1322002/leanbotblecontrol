@@ -142,13 +142,12 @@ footer {
     .no-influence {
         position: fixed;
         bottom: 80px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
     #OpenlinkCode {
-        margin-top:20px;
+        margin-top:30px;
         text-align: center;
         bottom: 0px;
-        /* margin-bottom: 50px; */
     }
     .speed-value{
         margin-top:3px;
