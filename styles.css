@@ -1,6 +1,9 @@
 
- body {
+body {
     height: 100vh; /* 100% of the viewport height */
+}
+p {
+   font-weight: bold;
 }
 .navbar {
     display: flex;
@@ -276,7 +279,6 @@ footer {
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(135deg)
 }
-
 
 .control-button:nth-child(1) {
     top: 0;
