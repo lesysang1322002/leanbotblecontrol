@@ -126,6 +126,16 @@ function handleMouseOut() {
     Stop();
 }
 // Function hướng 
+function CloseDoor(){
+    send ("C");
+    console.log("Close Door");
+}
+
+function OpenDoor(){
+    send ("O");
+    console.log("Open Door");
+}
+
 function Forward(){
     send("F");
 }
@@ -229,6 +239,8 @@ annyang.addCommands({
     'sound on' : hornOn,
     'sound off' : hornOff,
     'stop': Stop,
+    'close the door': CloseDoor,
+    'open the door': OpenDoor,
 });
 annyang.addCallback('result', function(phrases) {
     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
