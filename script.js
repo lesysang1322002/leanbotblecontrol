@@ -136,6 +136,22 @@ function OpenDoor(){
     console.log("Open Door");
 }
 
+function Feild1(){
+    send("M");
+}
+
+function Feild2(){
+    send("N");
+}
+
+function Feild3(){
+    send("P");
+}
+
+function Feild4(){
+    send("Q");
+}
+
 function Forward(){
     send("F");
 }
@@ -241,6 +257,10 @@ annyang.addCommands({
     'stop': Stop,
     'close the door': CloseDoor,
     'open the door': OpenDoor,
+    'go to field 1': Feild1,
+    'go to field 2': Feild2,
+    'go to field 3': Feild3,
+    'go to field 4': Feild4,
 });
 annyang.addCallback('result', function(phrases) {
     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
