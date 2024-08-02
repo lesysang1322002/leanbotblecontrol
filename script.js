@@ -261,6 +261,10 @@ annyang.addCommands({
     'go to field two': Feild2,
     'go to field three': Feild3,
     'go to field four': Feild4,
+    'go to field 1': Feild1,
+    'go to field 2': Feild2,
+    'go to field 3': Feild3,
+    'go to field 4': Feild4,
 });
 annyang.addCallback('result', function(phrases) {
     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
