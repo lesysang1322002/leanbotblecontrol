@@ -1,3 +1,10 @@
+/*Cú pháp câu lệnh điêu khiển:
+  Forward + distance  + cm
+  Backward + distance  + cm
+  Turn Left + angle + degree
+  Turn Right + angle + degree
+*/
+
 #include <Leanbot.h>                    // use Leanbot library
 
 String command;
@@ -16,37 +23,37 @@ void serialCheckCommand(){
   if(Serial.available() > 0){
     command = Serial.readStringUntil('\n');
     Serial.println(command);
-    if(command.StartsWith("Forward")) Forward();
-    else if(command.StartsWith("Backward")) Backward();
-    else if(command.StartsWith("Left")) Left();
-    else if(command.StartsWith("Right")) Right();
+    if(command.startsWith("Forward")) Forward();
+    else if(command.startsWith("Backward")) Backward();
+    else if(command.startsWith("Left")) Left();
+    else if(command.startsWith("Right")) Right();
   }
 }
 
 void Forward(){
-  int distance = command.substring(8).toInt();
+  int distance = 10;
   LbMotion.runLR(speed, speed);
-  LbMotion.waitDistance(distance);
-  LbMotion.stopAndwait();
+  LbMotion.waitDistanceMm(distance*10);
+  LbMotion.stopAndWait();
 }
 
 void Backward(){
   int distance = command.substring(9).toInt();
   LbMotion.runLR(-speed, -speed);
-  LbMotion.waitDistance(distance);
-  LbMotion.stopAndwait();
+  LbMotion.waitDistanceMm(distance*10);
+  LbMotion.stopAndWait();
 }
 
 void Left(){
   int angle = command.substring(5).toInt();
-  LbMotion.runL(-speed, +speed);
+  LbMotion.runLR(-speed, +speed);
   LbMotion.waitRotationDeg (angle);
-  LbMotion.stopAndwait();
+  LbMotion.stopAndWait();
 }
 
 void Right(){
   int angle = command.substring(6).toInt();
-  LbMotion.runL(+speed, -speed);
+  LbMotion.runLR(+speed, -speed);
   LbMotion.waitRotationDeg (angle);
-  LbMotion.stopAndwait();
+  LbMotion.stopAndWait();
 }
