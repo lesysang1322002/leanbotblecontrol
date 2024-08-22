@@ -243,6 +243,27 @@ function stopListen() {
     document.getElementById('CloseText').innerText = "";
     document.getElementById('spokenCommand').innerHTML = "";
 }
+
+function moveForward(distance) {
+    console.log(`Forward ${distance} cm`);
+    send("Forward " + distance);
+}
+
+function moveBackward(distance) {
+    console.log(`Backward ${distance} cm`);
+    send("Backward " + distance);    
+}
+
+function moveturnLeft(angle) {
+    console.log(`Turn left ${angle} degree`);
+    send("Left " + angle);
+}
+
+function moveturnRight(angle) {
+    console.log(`Turn right ${angle} degree`);
+    send("Right " + angle);
+}
+
 annyang.addCommands({
     'light on' : ledOn,
     'light off' : ledOff,
@@ -265,10 +286,24 @@ annyang.addCommands({
     'go to field 2': Feild2,
     'go to field 3': Feild3,
     'go to field 4': Feild4,
+    'forward *distance cm': function(distance) {
+        moveForward(parseInt(distance));
+    },
+    'backward *distance cm': function(distance) {
+        moveBackward(parseInt(distance));
+    },
+    'turn left *angle degrees': function(angle) {
+        moveturnLeft(parseInt(angle));
+    },
+    'turn right *angle degrees': function(angle) {
+        moveturnRight(parseInt(angle));
+    }
 });
+
 annyang.addCallback('result', function(phrases) {
     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
 });
+
 let isListening = false;
 
 function toggleListen() {
@@ -281,6 +316,7 @@ function toggleListen() {
   isListening = !isListening;
   updateMicImage();
 }
+
 function updateMicImage() {
     const micImage = document.getElementById("micImage");
     micImage.src = isListening ? "micron.png" : "micoff.png";
