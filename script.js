@@ -276,28 +276,28 @@ annyang.addCommands({
     'sound on' : hornOn,
     'sound off' : hornOff,
     'stop': Stop,
-    'close the door': CloseDoor,
-    'open the door': OpenDoor,
-    'go to field one': Feild1,
-    'go to field two': Feild2,
-    'go to field three': Feild3,
-    'go to field four': Feild4,
-    'go to field 1': Feild1,
-    'go to field 2': Feild2,
-    'go to field 3': Feild3,
-    'go to field 4': Feild4,
-    'forward *distance cm': function(distance) {
-        moveForward(parseInt(distance));
-    },
-    'backward *distance cm': function(distance) {
-        moveBackward(parseInt(distance));
-    },
-    'turn left *angle degrees': function(angle) {
-        moveturnLeft(parseInt(angle));
-    },
-    'turn right *angle degrees': function(angle) {
-        moveturnRight(parseInt(angle));
-    }
+    // 'close the door': CloseDoor,
+    // 'open the door': OpenDoor,
+    // 'go to field one': Feild1,
+    // 'go to field two': Feild2,
+    // 'go to field three': Feild3,
+    // 'go to field four': Feild4,
+    // 'go to field 1': Feild1,
+    // 'go to field 2': Feild2,
+    // 'go to field 3': Feild3,
+    // 'go to field 4': Feild4,
+    // 'forward *distance cm': function(distance) {
+    //     moveForward(parseInt(distance));
+    // },
+    // 'backward *distance cm': function(distance) {
+    //     moveBackward(parseInt(distance));
+    // },
+    // 'turn left *angle degrees': function(angle) {
+    //     moveturnLeft(parseInt(angle));
+    // },
+    // 'turn right *angle degrees': function(angle) {
+    //     moveturnRight(parseInt(angle));
+    // }
 });
 
 annyang.addCallback('result', function(phrases) {
