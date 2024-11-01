@@ -3,6 +3,11 @@
   Backward + distance  + cm
   Turn Left + angle + degree
   Turn Right + angle + degree
+  Ví dụ: 
+  Forward 10 cm
+  Backward 10 cm
+  Turn Left 90 degree
+  Turn Right 90 degree
 */
 
 #include <Leanbot.h>                    // use Leanbot library

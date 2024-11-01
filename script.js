@@ -286,18 +286,18 @@ annyang.addCommands({
     // 'go to field 2': Feild2,
     // 'go to field 3': Feild3,
     // 'go to field 4': Feild4,
-    // 'forward *distance cm': function(distance) {
-    //     moveForward(parseInt(distance));
-    // },
-    // 'backward *distance cm': function(distance) {
-    //     moveBackward(parseInt(distance));
-    // },
-    // 'turn left *angle degrees': function(angle) {
-    //     moveturnLeft(parseInt(angle));
-    // },
-    // 'turn right *angle degrees': function(angle) {
-    //     moveturnRight(parseInt(angle));
-    // }
+    'forward *distance cm': function(distance) {
+        moveForward(parseInt(distance));
+    },
+    'backward *distance cm': function(distance) {
+        moveBackward(parseInt(distance));
+    },
+    'turn left *angle degrees': function(angle) {
+        moveturnLeft(parseInt(angle));
+    },
+    'turn right *angle degrees': function(angle) {
+        moveturnRight(parseInt(angle));
+    }
 });
 
 annyang.addCallback('result', function(phrases) {
