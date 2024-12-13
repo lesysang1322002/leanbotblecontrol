@@ -265,40 +265,34 @@ function moveturnRight(angle) {
 }
 
 annyang.addCommands({
-    'light on' : ledOn,
-    'light off' : ledOff,
-    'open' : gripperOpen,
+    '*text': function(text) {
+      const lowercaseText = text.toLowerCase();                                                 // Convert to lowercase for comparison
+      console.log('User said:', lowercaseText);
+      
+      // Loop through the commands and check if the string starts with any of the commands
+      for (const command in commands) {
+        if (lowercaseText.startsWith(command)) {
+          console.log(`Matched command: "${command}" -> Calling corresponding function`);
+          commands[command]();                                                                  // Call the corresponding function
+          break;                                                                                // Exit the loop after finding a matching command
+        }
+      }
+    }
+});
+
+const commands = {
+    'light on': ledOn,
+    'light off': ledOff,
+    'open': gripperOpen,
     'close': gripperClose,
-    'turn left':Left,
-    'turn right':Right,
+    'turn left': Left,
+    'turn right': Right,
     'forward': Forward,
     'backward': Backward,
-    'sound on' : hornOn,
-    'sound off' : hornOff,
-    'stop': Stop,
-    // 'close the door': CloseDoor,
-    // 'open the door': OpenDoor,
-    // 'go to field one': Feild1,
-    // 'go to field two': Feild2,
-    // 'go to field three': Feild3,
-    // 'go to field four': Feild4,
-    // 'go to field 1': Feild1,
-    // 'go to field 2': Feild2,
-    // 'go to field 3': Feild3,
-    // 'go to field 4': Feild4,
-    // 'forward *distance cm': function(distance) {
-    //     moveForward(parseInt(distance));
-    // },
-    // 'backward *distance cm': function(distance) {
-    //     moveBackward(parseInt(distance));
-    // },
-    // 'turn left *angle degrees': function(angle) {
-    //     moveturnLeft(parseInt(angle));
-    // },
-    // 'turn right *angle degrees': function(angle) {
-    //     moveturnRight(parseInt(angle));
-    // }
-});
+    'sound on': hornOn,
+    'sound off': hornOff,
+    'stop': Stop
+};
 
 annyang.addCallback('result', function(phrases) {
     document.getElementById('spokenCommand').innerHTML = 'You said: ' + phrases[0];
@@ -319,6 +313,6 @@ function toggleListen() {
 
 function updateMicImage() {
     const micImage = document.getElementById("micImage");
-    micImage.src = isListening ? "micron.png" : "micoff.png";
+    micImage.src = isListening ? "image/micron.png" : "image/micoff.png";
     micImage.alt = isListening ? "Mic On" : "Mic Off";
   }

@@ -95,7 +95,7 @@ footer {
     }
     .speed{
         width:50%;
-        margin-left:auto; 
+        /* margin-left:auto;  */
         margin-top:20px;
     }
     .mic{
@@ -143,9 +143,10 @@ footer {
         align-items: center;
     }
     .no-influence {
-        position: fixed;
-        bottom: 80px;
-        margin-bottom: 25px;
+        /* position: fixed; */
+        /* bottom: 80px; */
+        position: relative;
+        margin-bottom: 15px;
     }
     #OpenlinkCode {
         margin-top:30px;
@@ -205,9 +206,9 @@ footer {
 .button-Left::before {
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(180deg)
 }
@@ -215,18 +216,18 @@ footer {
 .button-Right::before {
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
 }
 
 .button-Forward::before {
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(-90deg)
 }
@@ -234,9 +235,9 @@ footer {
 .button-Backward::before {
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(90deg)
 }
@@ -246,36 +247,36 @@ footer {
 .button-ForwardRight::before {
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(-45deg)
 }
 .button-ForwardLeft::before{
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(-135deg)
 }
 .button-BackRight::before {
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(45deg)
 }
 .button-BackLeft::before{
     content: "";
     display: inline-block;
-    width: 30px; /* Đặt kích thước của hình ảnh tùy thuộc vào yêu cầu của bạn */
+    width: 30px; 
     height: 30px;
-    background-image: url('arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
+    background-image: url('image/arrow.png'); /* Đặt đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Điều này giúp ảnh kích thước đầy đủ trong phần đối tượng */
     transform: rotate(135deg)
 }
