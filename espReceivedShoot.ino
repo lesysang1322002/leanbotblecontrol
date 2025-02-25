@@ -59,23 +59,6 @@ bool connectToServer(BLEAddress pAddress) {
   return true;
 }
 
-bool checkLaze(int pin) {
-  return digitalRead(pin) == 0;
-}
-
-void turnServo(Servo &servo, int angle) {
-  for (int pos = 0; pos <= angle; pos += 5) {
-    servo.write(pos);
-    delay(20);
-  }
-}
-
-void buzz() {
-  digitalWrite(BUZZ_PIN, HIGH);
-  delay(200);
-  digitalWrite(BUZZ_PIN, LOW);
-}
-
 static void notifyCallback(BLERemoteCharacteristic* pBLERemoteCharacteristic, uint8_t* pData, size_t length, bool isNotify) {
   String receivedData = "";
   for (size_t i = 0; i < length; i++) receivedData += (char)pData[i];
@@ -110,6 +93,23 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks {
     }
   }
 };
+
+bool checkLaze(int pin) {
+  return digitalRead(pin) == 0;
+}
+
+void turnServo(Servo &servo, int angle) {
+  for (int pos = 0; pos <= angle; pos += 5) {
+    servo.write(pos);
+    delay(20);
+  }
+}
+
+void buzz() {
+  digitalWrite(BUZZ_PIN, HIGH);
+  delay(200);
+  digitalWrite(BUZZ_PIN, LOW);
+}
 
 void setup() {
   Serial.begin(115200);
